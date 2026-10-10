@@ -96,7 +96,6 @@ html{overflow-x:clip}
 .service-category[open]{grid-column:1/-1}
 .service-category summary{display:flex;align-items:center;gap:18px;padding:24px;cursor:pointer;list-style:none;min-height:110px}
 .service-category summary::-webkit-details-marker{display:none}
-.category-letter{font:27px/1 var(--serif);color:var(--primary);flex-shrink:0}
 .category-summary{flex:1;min-width:0}.category-summary h3{font:25px/1.2 var(--serif)}
 .category-summary>span{display:block;font-size:11px;margin-top:8px;line-height:1.7}
 .category-expand{font-size:27px;flex-shrink:0;transition:transform .2s}
@@ -104,7 +103,17 @@ html{overflow-x:clip}
 .service-category[open] summary>.category-expand{transform:rotate(45deg)}
 .category-content{padding:0 24px 25px;border-top:1px solid var(--line)}
 .catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:22px}
-.catalog-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;background:var(--cream);border:1px solid var(--line);border-radius:5px;padding:22px;transition:transform .3s var(--ease),background .3s}
+.catalog-card{display:block;min-width:0;align-self:start;background:var(--cream);border:1px solid var(--line);border-radius:5px;padding:22px;transition:transform .3s var(--ease),background .3s}
+.service-category .catalog-card>summary{display:block;padding:0;min-height:0;list-style:none}
+.extra-toggle{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:44px;margin-top:12px;font-size:12px;color:var(--ink)}
+.extra-expand{font-size:25px;transition:transform .2s}
+.catalog-card[open] .extra-expand{transform:rotate(45deg)}
+.extra-info{border-top:1px solid var(--line);margin-top:10px;padding-top:4px}
+.extra-info h5{font:600 12px/1.6 var(--sans);margin-top:16px}
+.extra-info ul{padding-left:18px;margin-top:8px;font-size:12px;line-height:1.8}
+.extra-options{font-size:12px;margin-top:12px}
+.extra-options>div{display:flex;justify-content:space-between;gap:12px;padding-block:9px;border-bottom:1px solid var(--line)}
+.extra-options dt{min-width:0}.extra-options dd{flex-shrink:0;font-weight:600;text-align:right}
 .catalog-card:hover{transform:translateY(-3px);background:var(--mint)}
 .catalog-card h4{font:25px/1.25 var(--serif);overflow-wrap:anywhere}
 .catalog-card p{font-size:12px;line-height:1.8;margin-top:12px}

@@ -97,6 +97,8 @@ html{overflow-x:clip}
 .example-shot>span{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;font-size:12px;line-height:1.6}
 .examples-personajes img,.examples-catering img{aspect-ratio:4/5;object-fit:contain;padding:12px}
 .examples-catering{grid-template-columns:minmax(0,420px)}
+.examples-local img{aspect-ratio:4/3;object-fit:contain;background:var(--paper)}
+.gallery-grid>.examples-local{grid-column:1/-1;margin-top:0}
 .service-examples{margin-top:55px}.service-examples h2{font-size:clamp(30px,4vw,44px)}
 .detail-visual.is-example img{object-fit:contain;border-radius:7px;background:var(--paper);height:420px;padding:12px}
 .service-breadcrumb{font-size:12px;margin-bottom:18px}.service-breadcrumb a{text-decoration:underline}

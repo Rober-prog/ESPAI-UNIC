@@ -75,8 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const gallery = document.getElementById('galleryDialog');
   document.querySelectorAll('[data-gallery]').forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', event => {
       if (!gallery) return;
+      event.preventDefault();
       const img = document.getElementById('galleryImage');
       img.src = button.dataset.gallery;
       img.alt = button.dataset.caption;
@@ -115,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   // Las URL originales de servicios se conservan.
   const title = document.getElementById('serviceTitle');
-  if (title && window.espaiServices) {
+  if (title && window.espaiServices && !document.body.dataset.staticService) {
     const id = new URLSearchParams(location.search).get('service');
     const service = Object.prototype.hasOwnProperty.call(window.espaiServices, id) ? window.espaiServices[id] : null;
     if (!service) {
@@ -123,6 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.detail-grid').innerHTML = "<div class=\"error-message\"><p>Aquest servei no està disponible. Descobreix les nostres celebracions i consulta per WhatsApp.</p><a class=\"text-link\" href=\"index.html#servicios\">Veure celebracions ↗</a></div>";
       document.title = "Celebracions · Espai Únic";
       document.querySelector('meta[name="robots"]').content = 'noindex, follow';
+      return;
+    }
+    if (service.page) {
+      location.replace(service.page + location.hash);
       return;
     }
     title.textContent = service.title;

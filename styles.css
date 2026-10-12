@@ -90,6 +90,17 @@ html{overflow-x:clip}
 @media(max-width:380px){.brand img{width:76px;height:84px}.header-book{font-size:11px;padding-inline:10px}.menu-toggle{width:36px;min-width:36px}.language-switch{font-size:9px}}
 
 /* Catálogo comercial: misma identidad, categorías plegables y tarifas separadas. */
+.examples-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.example-shot{display:block;min-width:0;background:var(--cream);border:1px solid var(--line);border-radius:7px;overflow:hidden;transition:transform .3s var(--ease)}
+.example-shot:hover{transform:translateY(-3px)}
+.example-shot img{width:100%;height:auto;aspect-ratio:16/10;object-fit:contain;background:var(--paper)}
+.example-shot>span{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;font-size:12px;line-height:1.6}
+.examples-personajes img,.examples-catering img{aspect-ratio:4/5;object-fit:contain;padding:12px}
+.examples-catering{grid-template-columns:minmax(0,420px)}
+.service-examples{margin-top:55px}.service-examples h2{font-size:clamp(30px,4vw,44px)}
+.detail-visual.is-example img{object-fit:contain;border-radius:7px;background:var(--paper);height:420px;padding:12px}
+.service-breadcrumb{font-size:12px;margin-bottom:18px}.service-breadcrumb a{text-decoration:underline}
+@media(max-width:600px){.examples-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.examples-catering{grid-template-columns:minmax(0,1fr)}.example-shot>span{padding:10px;font-size:11px}.detail-visual.is-example img{height:300px}.service-examples{margin-top:35px}}
 .services-section{padding-block:90px;background:color-mix(in srgb,var(--yellow) 12%,white)}
 .service-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
 .service-category{background:var(--paper);border:1px solid var(--line);border-radius:7px;min-width:0}

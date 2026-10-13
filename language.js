@@ -2,7 +2,7 @@
 (() => {
   const current = document.documentElement.lang === 'ca' ? 'ca' : 'es';
   // El almacenamiento queda limitado a este sitio también en GitHub Pages.
-  const stylesheet = document.querySelector('link[rel="stylesheet"][href$="styles.css"]');
+  const stylesheet = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
   window.espaiCookiePath = stylesheet ? new URL('.', stylesheet.href).pathname : '/';
   const links = document.querySelectorAll('[data-language]');
   links.forEach(link => {

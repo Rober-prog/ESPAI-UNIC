@@ -99,6 +99,13 @@ html{overflow-x:clip}
 .examples-catering{grid-template-columns:minmax(0,420px)}
 .examples-local img{aspect-ratio:4/3;object-fit:contain;background:var(--paper)}
 .gallery-grid>.examples-local{grid-column:1/-1;margin-top:0}
+.space-section{row-gap:30px}.space-action{grid-column:1/-1;text-align:center}.space-action .button{max-width:100%;white-space:normal}
+.service-related>h2{text-align:center}.service-related .extras-grid.contact-only{grid-template-columns:minmax(0,420px);justify-content:center}
+.instagram-profile{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;min-height:44px;font-size:10px}
+.instagram-profile svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7}.instagram-profile .instagram-dot{fill:currentColor;stroke:none}
+@media(max-width:1200px){.instagram-profile>span{display:none}.site-header{gap:12px}}
+@media(max-width:600px){.instagram-profile svg{width:20px;height:20px}.site-header.site-header{gap:8px;padding-inline:14px}.space-action .button{width:100%}}
+@media(max-width:380px){.site-header.site-header{padding-inline:10px;gap:6px}.site-header .brand{flex-shrink:0}.site-header .brand img{width:55px;height:60px;min-width:55px}.instagram-profile{min-width:24px;justify-content:center}}
 .service-examples{margin-top:55px}.service-examples h2{font-size:clamp(30px,4vw,44px)}
 .detail-visual.is-example img{object-fit:contain;border-radius:7px;background:var(--paper);height:420px;padding:12px}
 .service-breadcrumb{font-size:12px;margin-bottom:18px}.service-breadcrumb a{text-decoration:underline}

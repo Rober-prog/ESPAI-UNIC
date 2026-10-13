@@ -62,6 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!framePending) { framePending = true; requestAnimationFrame(updateProgress); }
   }, { passive: true });
   updateProgress();
+  // Return directly to the chosen category, with its options open.
+  const showLinkedCategory = () => {
+    if (location.hash === '#tarifas') {
+      location.replace('servicio-alquiler-sala.html#roomRates');
+      return;
+    }
+    const target = document.getElementById(location.hash.slice(1));
+    if (target?.matches('.service-category')) {
+      target.open = true;
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+    }
+  };
+  showLinkedCategory();
+  window.addEventListener('hashchange', showLinkedCategory);
   // Movimiento suave solo con ratón, sin interferir con el scroll táctil.
   const art = document.querySelector('.hero-art');
   if (art && window.matchMedia('(pointer: fine)').matches) {

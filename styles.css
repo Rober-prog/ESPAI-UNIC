@@ -1,3 +1,5 @@
+/* Párrafos y listas descriptivas de todas las páginas ES/CA. */
+main p:not(.service-price-summary):not(.service-duration):not(.form-status):not(.hero-location):not(#serviceImageCaption),main li,.category-summary>span{text-align:justify;text-justify:inter-word;hyphens:auto}
 /* Tonos representativos muestreados del emblema floral original. */
 :root{
   --primary:#4CADA1;

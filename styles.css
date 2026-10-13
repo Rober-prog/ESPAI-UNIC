@@ -135,6 +135,7 @@ body[data-static-service="6"] .detail-visual img{border-radius:150px 8px 8px 8px
 .extra-expand{font-size:25px;transition:transform .2s}
 .catalog-card[open] .extra-expand{transform:rotate(45deg)}
 .extra-info{border-top:1px solid var(--line);margin-top:10px;padding-top:4px}
+.extra-info .service-consult{margin-top:16px;min-height:44px;padding:8px 14px;font-size:11px;gap:12px}
 .extra-info h5{font:600 12px/1.6 var(--sans);margin-top:16px}
 .extra-info ul{padding-left:18px;margin-top:8px;font-size:12px;line-height:1.8}
 .extra-options{font-size:12px;margin-top:12px}

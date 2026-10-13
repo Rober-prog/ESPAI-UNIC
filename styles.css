@@ -99,7 +99,8 @@ html{overflow-x:clip}
 .example-shot>span{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;font-size:12px;line-height:1.6}
 .examples-personajes img,.examples-catering img{aspect-ratio:4/5;object-fit:contain;padding:12px}
 .examples-catering{grid-template-columns:minmax(0,420px)}
-.examples-local img{aspect-ratio:4/3;object-fit:contain;background:var(--paper)}
+.examples-local img{aspect-ratio:4/3;object-fit:cover;background:var(--paper)}
+.examples-decoracion img{object-fit:cover}
 .gallery-grid>.examples-local{grid-column:1/-1;margin-top:0}
 .space-section{row-gap:30px}.space-action{grid-column:1/-1;text-align:center}.space-action .button{max-width:100%;white-space:normal}
 .service-related>h2{text-align:center}.service-related .extras-grid.contact-only{grid-template-columns:minmax(0,420px);justify-content:center}
@@ -110,6 +111,7 @@ html{overflow-x:clip}
 @media(max-width:380px){.site-header.site-header{padding-inline:10px;gap:6px}.site-header .brand{flex-shrink:0}.site-header .brand img{width:55px;height:60px;min-width:55px}.instagram-profile{min-width:24px;justify-content:center}}
 .service-examples{margin-top:55px}.service-examples h2{font-size:clamp(30px,4vw,44px)}
 .detail-visual.is-example img{object-fit:contain;border-radius:7px;background:var(--paper);height:420px;padding:12px}
+body[data-static-service="10"] .detail-visual img,body[data-static-service="6"] .detail-visual img{object-fit:cover;padding:0}
 .service-breadcrumb{font-size:12px;margin-bottom:18px}.service-breadcrumb a{text-decoration:underline}
 @media(max-width:600px){.examples-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.examples-catering{grid-template-columns:minmax(0,1fr)}.example-shot>span{padding:10px;font-size:11px}.detail-visual.is-example img{height:300px}.service-examples{margin-top:35px}}
 .services-section{padding-block:90px;background:color-mix(in srgb,var(--yellow) 12%,white)}
